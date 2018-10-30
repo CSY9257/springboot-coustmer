@@ -1,0 +1,39 @@
+spring:
+  rabbitmq:
+    password: guest
+    username: guest
+    host: 127.0.0.1
+    port: 5672
+    mvc:
+      view:
+        prefix: /WEB-INF/jsp/
+        suffix: .jsp
+      datasource:
+        username: root
+        password: root
+        url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&characterEncoding=UTF-8
+        driver-class-name: com.mysql.jdbc.Driver
+      jpa:
+        show-sql: true
+        hibernate:
+          ddl-auto: update
+
+      data:
+        mongodb:
+        uri: mongodb://localhost:27017/Goods
+
+
+server:
+  servlet:
+    context-path: /springboot-coustmer
+  port: 8088
+
+
+
+  redis:
+    host: 127.0.0.1
+    port: 6380
+    jedis:
+      pool:
+        max-idle: 8
+        min-idle: 0
